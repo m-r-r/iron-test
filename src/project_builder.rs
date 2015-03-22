@@ -79,7 +79,7 @@ impl ProjectBuilder {
     /// Add a new file to the temporary directory with the given contents.
     pub fn file<P, B>(mut self, path: P, body: B) -> ProjectBuilder
     where P: AsPath, B: IntoBytes {
-        self.files.push(FileBuilder::new(self.root.join(&path), body));
+        self.files.push(FileBuilder::new(self.root.join(path), body));
         self
     }
 
